@@ -24,7 +24,10 @@ Function Send-KeyStrokes
         . .\Send-KeyStrokes.ps1
         Send-KeyStrokes -StringToSend 'SuperSecretPassword' -Delay 7
     .NOTES
-        This script must be dot-included (. .\Send-KeyStrokes.ps1) before the function is available for use.
+        - Dot source the script.
+        - Execute the Send-KeyStrokes function with arguments appropriate to your needs.  The script will wait 7 seconds by default before it sends keystrokes to the window in focus.
+        - Before the delay timer expires, click or otherwise set focus on the window to receive the keystrokes.
+        - If you wish to include a single qoute within the string to send, either enclose the string with double qoutes or escape the single qoute by using another single qoute.  Normal PowerShell string syntax applies.
     .NOTES
         Author:             Robert Decker
         Email:              rdecker@cybernorth.com
